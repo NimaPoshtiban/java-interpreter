@@ -29,7 +29,7 @@ public class Repl {
             var line = scanner.next();
             var lexer = new Lexer(line);
             for (var token = lexer.nextToken(); (token.type == null ? TokenType.EOF != null : !token.type.equals(TokenType.EOF)); token = lexer.nextToken()) {
-                System.out.printf("Type: %s, Literal: %s", token.type, token.literal);
+                System.out.printf("Type: %s, Literal: %s\n", token.type, token.literal);
             }
         }
     }
